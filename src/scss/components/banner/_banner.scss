@@ -4,4 +4,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 592px;
+
+    &_bottom {
+        background-image: url('../../src/assets/images/banner-btm-bg.jpg');
+        padding-top: 54px;
+        padding-left: 729px;
+    }
 }
