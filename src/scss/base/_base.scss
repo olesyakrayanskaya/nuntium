@@ -1,3 +1,5 @@
+@use 'variables';
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,6 +13,7 @@
 
 html, body {
     height: 100%;
+    background-color: variables.$primary-color;
   }
 
 :active,
@@ -30,4 +33,10 @@ a {
     display: inline-block;
     cursor: pointer;
     color: inherit;
+}
+
+.container {
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 31px 25px 25px;
 }

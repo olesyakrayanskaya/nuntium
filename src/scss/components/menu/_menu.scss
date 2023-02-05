@@ -1,0 +1,20 @@
+@use '../../base';
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 236px;
+
+    &__item {
+        @extend %nav-text;
+    }
+
+    &__link:hover {
+        transform: scale(1.1);
+        color: #383125;
+        text-decoration: underline;
+        transition: all 0.3s linear;
+    }
+}

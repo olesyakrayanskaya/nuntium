@@ -1,0 +1,49 @@
+@use '../../base/variables';
+@use '../../base/extends';
+
+.article {
+    width: 509px;
+    height: 483px;
+    background-color: variables.$primary-color;
+    padding: 76px 40px 96px;
+    margin-left: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+
+    &__tag {
+        @extend %tag-text;
+    }
+
+    &__title {
+        @extend %h2-text;
+    }
+
+    &__info {
+        margin-top: 12px;
+        margin-bottom: 14px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__dot {
+        width: 3px;
+        height: 3px;
+        background-color: variables.$tag-color;
+        margin-left: 9px;
+        margin-right: 10px;
+    }
+
+    &__autor, 
+    &__time,
+    &__readtime {
+        @extend %date-text;
+    }
+
+    &__text {
+        @extend %paragraph-text;
+    }
+}

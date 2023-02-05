@@ -1,0 +1,51 @@
+@use 'variables';
+
+%h1-text {
+    font-family: 'OpenSans', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 57px;
+    color: variables.$text-color;
+}
+
+%h2-text {
+    font-family: 'LibreBaskerville', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 41px;
+    color: variables.$text-color;
+}
+
+%paragraph-text {
+    font-family: 'OpenSans', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: variables.$text-color;
+}
+
+%tag-text {
+    font-family: 'OpenSans', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    text-transform: uppercase;
+    color: variables.$tag-color;
+}
+
+%date-text {
+    font-family: 'OpenSans', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: variables.$tag-color;
+}
+
+%nav-text {
+    font-family: 'LibreBaskerville', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: variables.$text-color;
+}
+
