@@ -46,4 +46,10 @@
     &__text {
         @extend %paragraph-text;
     }
+
+    &_sm {
+        width: 430px;
+        height: 372px;
+        margin-left: 55px;
+    }
 }

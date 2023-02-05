@@ -1,0 +1,40 @@
+@use '../../base/variables';
+@use '../../base/extends';
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 10px 60px;
+
+    &__title {
+        @extend %h2-text;
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 190px;
+            height: 5px;
+            background-color: #1C1C1C;
+            position: absolute;
+            top: 48px;
+            left: calc(50% - 95px);
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 54px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
