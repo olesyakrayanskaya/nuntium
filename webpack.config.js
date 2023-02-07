@@ -51,6 +51,15 @@ module.exports = {
             template: path.resolve(__dirname, 'src/pages', 'article.html'),
             filename: 'article.html',
         }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, 'src/pages', 'blog.html'),
+            filename: 'blog.html',
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, 'src/pages', 'about.html'),
+            filename: 'about.html',
+        }),
+
         new FaviconsWebpackPlugin('./src/assets/images/LogoFavicon.svg'),
         new FileManagerPlugin({
             events: {

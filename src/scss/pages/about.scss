@@ -1,1 +1,36 @@
-@use './base';
+@use "../base/variables";
+@use "../base/extends";
+
+.about {
+
+    margin-top: 120px;
+
+    &__title {
+        @extend %h1-text;
+        line-height: 52px;
+        text-align: center;        
+    }
+
+    &__inner {
+        max-width: 856px;
+        margin: 0 auto;
+    }
+
+    &__article_sm {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 30px;
+    }
+
+    &__text-wrapper {
+        margin-right: 38px;
+    }
+
+    &__text {
+        padding-bottom: 25px;
+        @extend %paragraph-text;
+    }
+}
