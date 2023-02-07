@@ -1,9 +1,8 @@
-@use '../../base/variables';
-@use '../../base/extends';
+@use "../../base/variables";
+@use "../../base/extends";
 
 .article {
     width: 509px;
-    height: 483px;
     background-color: variables.$primary-color;
     padding: 76px 40px 96px;
     margin-left: 45px;
@@ -37,19 +36,37 @@
         margin-right: 10px;
     }
 
-    &__autor, 
+    &__autor,
     &__time,
-    &__readtime {
+    &__readtime,
+    &__hashtags {
         @extend %date-text;
     }
 
-    &__text {
+    &__hashtags {
+        margin-bottom: 26px;
+    }
+
+    &__text,
+    &__text_lg {
         @extend %paragraph-text;
     }
 
     &_sm {
         width: 430px;
-        height: 372px;
         margin-left: 55px;
+    }
+
+    &_lg {
+        width: 652px;
+        margin: 0 auto;
+        padding: 76px 0px 96px;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__text_lg {
+        text-align: left;
+        margin-bottom: 25px;
     }
 }

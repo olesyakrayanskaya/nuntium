@@ -47,6 +47,10 @@ module.exports = {
             template: path.resolve(__dirname, 'src/pages', 'home.html'),
             filename: 'index.html',
         }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, 'src/pages', 'article.html'),
+            filename: 'article.html',
+        }),
         new FaviconsWebpackPlugin('./src/assets/images/LogoFavicon.svg'),
         new FileManagerPlugin({
             events: {

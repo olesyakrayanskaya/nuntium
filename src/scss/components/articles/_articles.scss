@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 10px 60px;
+    padding: 50px 10px 10px;
 
     &__title {
         @extend %h2-text;
@@ -36,6 +36,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
+        margin-bottom: 50px;
     }
 
     &__photo {

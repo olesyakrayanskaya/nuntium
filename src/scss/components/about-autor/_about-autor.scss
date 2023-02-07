@@ -1,0 +1,44 @@
+@use "../../base/variables";
+@use "../../base/extends";
+
+.about-autor {
+    padding-top: 50px;
+    text-align: left;
+
+    &__tag {
+        @extend %tag-text;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: 15px;
+    }
+
+    &__photo {
+        width: 160px;
+        height: 160px;
+        border-radius: 50px;
+        object-fit: cover;
+    }
+
+    &__article {
+        width: 458px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 37px;
+    }
+
+    &__autor {
+        @extend %date-text;
+    }
+
+    &__text {
+        @extend %paragraph-text;
+        padding-top: 13px;
+    }
+}

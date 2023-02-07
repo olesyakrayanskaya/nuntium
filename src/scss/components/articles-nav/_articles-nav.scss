@@ -1,0 +1,32 @@
+@use "../../base/variables";
+@use "../../base/extends";
+
+.articles-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: calc(100vw - 15px);
+
+    &__text {
+        display: inline-block;
+        @extend %nav-text;
+        font-weight: 400;
+        vertical-align: 65px;
+
+        &_back {
+            margin-left: 34px;
+        }
+
+        &_next {
+            margin-right: 29px;
+        }
+    }
+
+    &__arrow {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
+}
