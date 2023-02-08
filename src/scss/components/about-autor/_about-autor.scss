@@ -1,5 +1,5 @@
-@use "../../base/variables";
-@use "../../base/extends";
+@use '../../base/variables';
+@use '../../base/extends';
 
 .about-autor {
     padding-top: 50px;
@@ -20,8 +20,8 @@
     &__photo {
         width: 160px;
         height: 160px;
-        border-radius: 50px;
-        object-fit: cover;
+        border-radius: 50%;
+        object-fit: contain;
     }
 
     &__article {

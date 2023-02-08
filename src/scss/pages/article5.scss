@@ -1,0 +1,8 @@
+@use '../base/variables';
+@use '../base/extends';
+@use '../components/banner';
+
+.banner__article4 {
+    background-image: url('../../src/assets/images/banner-btm-bg.jpg');
+    @extend .banner;
+}

@@ -48,8 +48,28 @@ module.exports = {
             filename: 'index.html',
         }),
         new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, 'src/pages', 'home.html'),
+            filename: 'home.html',
+        }),
+        new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src/pages', 'article.html'),
             filename: 'article.html',
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, 'src/pages', 'article2.html'),
+            filename: 'article2.html',
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, 'src/pages', 'article3.html'),
+            filename: 'article3.html',
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, 'src/pages', 'article4.html'),
+            filename: 'article4.html',
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, 'src/pages', 'article4.html'),
+            filename: 'article5.html',
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src/pages', 'blog.html'),
