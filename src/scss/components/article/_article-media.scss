@@ -1,0 +1,49 @@
+.article {
+    @media (max-width: 600px) {
+        width: 400px;
+        padding: 30px 20px;
+    }
+
+    @media (max-width: 600px) {
+        width: 400px;
+        padding: 30px 20px;
+    }
+
+    @media (max-width: 460px) {
+        width: 300px;
+        margin-left: 10px;
+    }
+
+    &__title {
+        @media (max-width: 510px) {
+            font-size: 24px;
+            line-height: 26px;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 18px;
+            line-height: 20px;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+    }
+
+    &__info {
+        @media (max-width: 510px) {
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width: 400px) {
+            max-width: 320px;
+            margin: 10px auto;
+        }
+    }
+
+    &__text {
+        @media (max-width: 400px) {
+            max-width: 320px;
+            margin: 0 auto;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.articles {
+    &__item {
+        @media (max-width: 900px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__photo {
+        @media (max-width: 900px) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__article {
+        @media (max-width: 510px) {
+            margin-left: 0;
+            text-align: center;
+        }
+    }
+}

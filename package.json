@@ -1,6 +1,9 @@
 {
   "name": "webpackbaseconfig",
   "version": "1.0.0",
+  "repository": {
+    "url": "git+https://github.com/https:/olesyakrayanskaya/nuntium.git"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {

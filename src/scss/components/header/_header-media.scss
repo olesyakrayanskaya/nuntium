@@ -1,0 +1,12 @@
+.header {
+    @media (max-width: 510px) {
+        flex-direction: column;
+    }
+
+    &__nav {
+        @media (max-width: 510px) {
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    }
+}

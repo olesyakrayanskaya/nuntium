@@ -1,0 +1,13 @@
+.articles-nav {
+    @media (max-width: 1120px) {
+        &__text {
+            display: none;
+        }
+    }
+    @media (max-width: 500px) {
+        &__arrow {
+            width: 90px;
+            height: 90px;
+        }
+    }
+}
