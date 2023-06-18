@@ -17,6 +17,9 @@ module.exports = {
         filename: 'index.[contenthash].js',
         assetModuleFilename: path.join('[name].[contenthash][ext]'),
     },
+    experiments: {
+        topLevelAwait: true
+    },
     module: {
         rules: [
             {
