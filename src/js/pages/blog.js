@@ -1,6 +1,7 @@
+import url from '../main';
 import getData from './about';
 
-getData('https://course.vue.panfilov.academy/rest/v1/blog/articles/')
+getData(`${url}blog/articles/`)
     .then((data) => {
         console.log(data);
     });

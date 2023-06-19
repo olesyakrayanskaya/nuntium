@@ -1,7 +1,7 @@
+import url from '../main';
+
 async function getDataById(id) {
-    const url = 'https://course.vue.panfilov.academy/rest/v1/blog/article';
-    const urlById = `${url}/${id}`;
-    const response = await fetch(urlById);
+    const response = await fetch(`${url}blog/article/${id}`);
     return response.json();
 }
 

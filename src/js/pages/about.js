@@ -1,9 +1,11 @@
-export default async function getData(url = '') {
-    const response = await fetch(url);
+import url from '../main';
+
+export default async function getData(u) {
+    const response = await fetch(u);
     return response.json();
 }
 
-getData('https://course.vue.panfilov.academy/rest/v1/about')
+getData(`${url}about`)
     .then((data) => {
         console.log(data);
     });
