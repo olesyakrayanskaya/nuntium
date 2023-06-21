@@ -1,4 +1,4 @@
-import url from '../main';
+import { url } from '../main';
 import '../../scss/main.scss';
 
 export default async function getData(u) {

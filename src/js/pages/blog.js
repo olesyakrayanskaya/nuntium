@@ -1,4 +1,4 @@
-import url from '../main';
+import { url } from '../main';
 import getData from './about';
 import '../../scss/main.scss';
 
