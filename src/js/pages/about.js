@@ -1,4 +1,5 @@
 import url from '../main';
+import '../../scss/main.scss';
 
 export default async function getData(u) {
     const response = await fetch(u);
@@ -7,5 +8,5 @@ export default async function getData(u) {
 
 getData(`${url}about`)
     .then((data) => {
-        console.log(data);
+        console.log(data, 'about');
     });

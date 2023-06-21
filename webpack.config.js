@@ -11,7 +11,13 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 ghpages.publish('dist', function (err) { });
 
 module.exports = {
-    entry: path.resolve(__dirname, 'src', 'index.js'),
+    entry: {
+        'index': path.resolve(__dirname, './src/index.js'),
+        'home': path.resolve(__dirname, './src/js/pages/home.js'),
+        'about': path.resolve(__dirname, './src/js/pages/about.js'),        
+        'article': path.resolve(__dirname, './src/js/pages/article.js'),
+        'blog': path.resolve(__dirname, './src/js/pages/blog.js'),
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.[contenthash].js',
@@ -49,38 +55,43 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src/pages', 'home.html'),
             filename: 'index.html',
+            chunks: ['index'],
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src/pages', 'home.html'),
             filename: 'home.html',
+            chunks: ['home'],
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src/pages', 'article.html'),
             filename: 'article.html',
+            chunks: ['article'],
         }),
-        new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, 'src/pages', 'article2.html'),
-            filename: 'article2.html',
-        }),
-        new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, 'src/pages', 'article3.html'),
-            filename: 'article3.html',
-        }),
-        new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, 'src/pages', 'article4.html'),
-            filename: 'article4.html',
-        }),
-        new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, 'src/pages', 'article4.html'),
-            filename: 'article5.html',
-        }),
+        // new HtmlWebpackPlugin({
+        //     template: path.resolve(__dirname, 'src/pages', 'article2.html'),
+        //     filename: 'article2.html',
+        // }),
+        // new HtmlWebpackPlugin({
+        //     template: path.resolve(__dirname, 'src/pages', 'article3.html'),
+        //     filename: 'article3.html',
+        // }),
+        // new HtmlWebpackPlugin({
+        //     template: path.resolve(__dirname, 'src/pages', 'article4.html'),
+        //     filename: 'article4.html',
+        // }),
+        // new HtmlWebpackPlugin({
+        //     template: path.resolve(__dirname, 'src/pages', 'article4.html'),
+        //     filename: 'article5.html',
+        // }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src/pages', 'blog.html'),
             filename: 'blog.html',
+            chunks: ['blog'],
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src/pages', 'about.html'),
             filename: 'about.html',
+            chunks: ['about'],
         }),
 
         new FaviconsWebpackPlugin('./src/assets/images/LogoFavicon.svg'),
@@ -109,6 +120,9 @@ module.exports = {
         port: 9000,
     },
     optimization: {
+        splitChunks: {
+            chunks: 'all',
+        },
         minimizer: [
             new ImageMinimizerPlugin({
                 minimizer: {
