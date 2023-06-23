@@ -54,7 +54,21 @@
 
     &_sm {
         width: 430px;
+        height: 300px;
+        overflow-y: hidden;
         margin-left: 55px;
+        position: relative;
+    }
+
+    &_sm::after {
+        width: 430px;
+        height: 300px;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
     }
 
     &_lg {

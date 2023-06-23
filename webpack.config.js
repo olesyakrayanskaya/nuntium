@@ -12,7 +12,7 @@ ghpages.publish('dist', function (err) { });
 
 module.exports = {
     entry: {
-        'index': path.resolve(__dirname, './src/index.js'),
+        'index': path.resolve(__dirname, './src/js/pages/home.js'),
         'home': path.resolve(__dirname, './src/js/pages/home.js'),
         'about': path.resolve(__dirname, './src/js/pages/about.js'),        
         'article': path.resolve(__dirname, './src/js/pages/article.js'),

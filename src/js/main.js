@@ -1,8 +1,13 @@
 export const url = 'https://course.vue.panfilov.academy/rest/v1/';
 
+export async function getData(u) {
+    const response = await fetch(u);
+    return response.json();
+}
+
 export function createArticle(className, data) {
     const article = document.createElement('article');
-    article.className = `${className} article`;
+    article.className = `${className}`;
     const articleTag = document.createElement('span');
     articleTag.className = 'article__tag';
     articleTag.innerHTML = `${data.tag}`;
@@ -44,4 +49,19 @@ export function createArticle(className, data) {
     articleText.innerHTML = `${data.description}`;
     article.append(articleText);
     return article;
+}
+
+export function createArticlesItem(data) {
+    const articlesItem = document.createElement('div');
+    articlesItem.className = 'articles__item';
+    const articlesItemLink = document.createElement('a');
+    articlesItemLink.href = '#';
+    articlesItemLink.target = '_blank';
+    articlesItem.append(articlesItemLink);
+    const articlesPhoto = document.createElement('img');
+    articlesPhoto.className = 'articles__photo';
+    articlesPhoto.src = `${data.image}`;
+    articlesPhoto.alt = 'photo';
+    articlesItemLink.append(articlesPhoto);
+    return articlesItem;
 }

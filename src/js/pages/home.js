@@ -1,22 +1,26 @@
-import { createArticle, url } from '../main';
+import { getDataFeatured, createBannerTop } from '../banner';
 import '../../scss/main.scss';
+import {
+    url,
+    getData,
+    createArticle,
+    createArticlesItem,
+} from '../main';
 
-async function getDataFeatured() {
-    const response = await fetch(`${url}blog/featured/`);
-    return response.json();
-}
-
-function createBannerTop(className, data) {
-    const header = document.getElementById('headerID');
-    const banner = document.createElement('section');
-    banner.className = `${className}`;
-    banner.style.backgroundImage = `url('${data.image}')`;
-    header.after(banner);
-    const article = createArticle('banner__article', data);
-    banner.append(article);
-}
+const articlesInner = document.querySelector('.articles__inner');
 
 getDataFeatured()
     .then((data) => {
         createBannerTop('banner', data);
+    });
+
+getData(`${url}blog/articles/`)
+    .then((data) => {
+        console.log(data, 'blog');
+        for (let i = 0; i < 3; i++) {
+            const articlesItem = createArticlesItem(data[i]);
+            articlesInner.append(articlesItem);
+            const article = createArticle('articles__article article_sm', data[i]);
+            articlesItem.append(article);
+        }
     });
