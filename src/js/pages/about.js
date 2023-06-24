@@ -10,7 +10,6 @@ export default async function getData(u) {
 
 getData(`${url}about`)
     .then((data) => {
-        console.log(data, 'about');
         const aboutTitle = document.createElement('h1');
         aboutTitle.className = 'about__title';
         aboutTitle.innerHTML = `${data.title}`;

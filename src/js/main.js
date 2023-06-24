@@ -14,12 +14,12 @@ export function createArticle(className, data) {
     article.append(articleTag);
     const articleTitle = document.createElement('h2');
     articleTitle.className = 'article__title';
-    article.append(articleTitle);
+    articleTitle.innerHTML = `${data.title.replace(data.tag, '')}`;
     const articleLink = document.createElement('a');
-    articleLink.href = '#';
+    articleLink.href = `./article.html?article=${data.id}`;
     articleLink.target = '_blank';
-    articleLink.innerHTML = `${data.title.replace(data.tag, '')}`;
-    articleTitle.append(articleLink);
+    article.append(articleLink);
+    articleLink.append(articleTitle);
     const articleInfo = document.createElement('div');
     articleInfo.className = 'article__info';
     article.append(articleInfo);
@@ -55,7 +55,7 @@ export function createArticlesItem(data) {
     const articlesItem = document.createElement('div');
     articlesItem.className = 'articles__item';
     const articlesItemLink = document.createElement('a');
-    articlesItemLink.href = '#';
+    articlesItemLink.href = `./article.html?article=${data.id}`;
     articlesItemLink.target = '_blank';
     articlesItem.append(articlesItemLink);
     const articlesPhoto = document.createElement('img');

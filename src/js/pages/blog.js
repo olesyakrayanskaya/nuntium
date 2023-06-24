@@ -16,7 +16,6 @@ getDataFeatured()
 
 getData(`${url}blog/articles/`)
     .then((data) => {
-        console.log(data, 'blog');
         for (let i = 0; i < data.length; i++) {
             const articlesItem = createArticlesItem(data[i]);
             articlesInner.append(articlesItem);

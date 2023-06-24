@@ -1,7 +1,7 @@
 @use '../../base/variables';
 @use '../../base/extends';
 
-.about-autor {
+.about-author {
     padding-top: 50px;
     text-align: left;
 
@@ -33,7 +33,7 @@
         padding-left: 37px;
     }
 
-    &__autor {
+    &__author {
         @extend %date-text;
     }
 
