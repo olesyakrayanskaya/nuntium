@@ -50,7 +50,8 @@ function createArticle(className, data) {
     articleInfo.append(articleReadTime);
     const articleHashTag = document.createElement('span');
     articleHashTag.className = 'article__hashtags';
-    articleHashTag.innerHTML = `${data.tag.name}`;
+    articleHashTag.innerHTML = `#${data.tag.name}`;
+    articleHashTag.style.textTransform = 'none';
     article.append(articleHashTag);
     const articleText = document.createElement('p');
     articleText.className = 'article__text';
@@ -92,10 +93,15 @@ getDataById(articleID)
         const articleWrapper = document.querySelector('.article__wrapper');
         articleWrapper.append(article);
         createAboutAuthor(data);
+        const articlesCount = articlesData.length;
         linkBack.href = `./article.html?article=${data.prevId || 1}`;
-        linkNext.href = `./article.html?article=${data.nextId || 1}`;
-        const prevArticleTitle = articlesData[data.prevId].title;
-        const nextArticleTitle = articlesData[data.nextId].title;
-        textBack.innerHTML = `${prevArticleTitle || articlesData[1].title}`;
-        textNext.innerHTML = `${nextArticleTitle || articlesData[1].title}`;
+        linkNext.href = `./article.html?article=${data.nextId || articlesCount}`;
+        const prevArticleTitle = articlesData[data.prevId > 0
+            ? (data.prevId) - 1
+            : 0].title;
+        const nextArticleTitle = articlesData[data.nextId <= articlesCount && data.nextId != null
+            ? data.nextId - 1
+            : articlesCount - 1].title;
+        textBack.innerHTML = `${prevArticleTitle}`;
+        textNext.innerHTML = `${nextArticleTitle}`;
     });

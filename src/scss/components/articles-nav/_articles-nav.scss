@@ -9,6 +9,15 @@
     flex-wrap: nowrap;
     width: calc(100vw - 15px);
 
+    &__link {
+        display: inline-block;
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
     &__text {
         display: inline-block;
         @extend %nav-text;
@@ -29,4 +38,12 @@
         height: 150px;
         object-fit: cover;
     }
+}
+
+#next {
+    justify-content: flex-end;
+}
+
+#back {
+    justify-content: flex-start;
 }
